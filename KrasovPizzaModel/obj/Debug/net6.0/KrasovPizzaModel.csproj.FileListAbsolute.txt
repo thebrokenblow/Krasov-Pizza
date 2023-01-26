@@ -1,0 +1,14 @@
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\bin\Debug\net6.0\KrasovPizzaModel.deps.json
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\bin\Debug\net6.0\KrasovPizzaModel.dll
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\bin\Debug\net6.0\KrasovPizzaModel.pdb
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\obj\Debug\net6.0\KrasovPizzaModel.csproj.AssemblyReference.cache
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\obj\Debug\net6.0\KrasovPizzaModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\obj\Debug\net6.0\KrasovPizzaModel.AssemblyInfoInputs.cache
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\obj\Debug\net6.0\KrasovPizzaModel.AssemblyInfo.cs
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\obj\Debug\net6.0\KrasovPizzaModel.csproj.CoreCompileInputs.cache
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\obj\Debug\net6.0\KrasovPizzaModel.dll
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\obj\Debug\net6.0\refint\KrasovPizzaModel.dll
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\obj\Debug\net6.0\KrasovPizzaModel.pdb
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\obj\Debug\net6.0\ref\KrasovPizzaModel.dll
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\bin\Debug\net6.0\KrasovPizzaModel.runtimeconfig.json
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\obj\Debug\net6.0\KrasovPizzaModel.genruntimeconfig.cache

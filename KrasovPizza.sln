@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KrasovPizzaView", "KrasovPizzaView\KrasovPizzaView.csproj", "{7107D6DF-B0E9-4B08-B120-3AB9EDCE3749}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KrasovPizzaView", "KrasovPizzaView\KrasovPizzaView.csproj", "{7107D6DF-B0E9-4B08-B120-3AB9EDCE3749}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KrasovPizzaViewModel", "KrasovPizzaViewModel\KrasovPizzaViewModel.csproj", "{0AE6727C-FF7C-4C97-BBC8-A9D4F8951CD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KrasovPizzaViewModel", "KrasovPizzaViewModel\KrasovPizzaViewModel.csproj", "{0AE6727C-FF7C-4C97-BBC8-A9D4F8951CD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KrasovPizzaModel", "KrasovPizzaModel\KrasovPizzaModel.csproj", "{3409BB50-CC2E-4CDE-971D-9ECFF8B97D6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KrasovPizzaModel", "KrasovPizzaModel\KrasovPizzaModel.csproj", "{3409BB50-CC2E-4CDE-971D-9ECFF8B97D6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KrasovPizzaTests", "KrasovPizzaTests\KrasovPizzaTests.csproj", "{F4F74F8D-5D32-4360-B9D4-75CC2047ED31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KrasovPizzaTests", "KrasovPizzaTests\KrasovPizzaTests.csproj", "{AB8A7DD2-1EA3-4D97-A59E-04B01D9B4854}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{3409BB50-CC2E-4CDE-971D-9ECFF8B97D6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3409BB50-CC2E-4CDE-971D-9ECFF8B97D6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3409BB50-CC2E-4CDE-971D-9ECFF8B97D6E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F4F74F8D-5D32-4360-B9D4-75CC2047ED31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4F74F8D-5D32-4360-B9D4-75CC2047ED31}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4F74F8D-5D32-4360-B9D4-75CC2047ED31}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F4F74F8D-5D32-4360-B9D4-75CC2047ED31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB8A7DD2-1EA3-4D97-A59E-04B01D9B4854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB8A7DD2-1EA3-4D97-A59E-04B01D9B4854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB8A7DD2-1EA3-4D97-A59E-04B01D9B4854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB8A7DD2-1EA3-4D97-A59E-04B01D9B4854}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

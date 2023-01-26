@@ -1,0 +1,15 @@
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\bin\Debug\net6.0\KrasovPizzaViewModel.deps.json
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\bin\Debug\net6.0\KrasovPizzaViewModel.dll
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\bin\Debug\net6.0\KrasovPizzaViewModel.pdb
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\obj\Debug\net6.0\KrasovPizzaViewModel.csproj.AssemblyReference.cache
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\obj\Debug\net6.0\KrasovPizzaViewModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\obj\Debug\net6.0\KrasovPizzaViewModel.AssemblyInfoInputs.cache
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\obj\Debug\net6.0\KrasovPizzaViewModel.AssemblyInfo.cs
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\obj\Debug\net6.0\KrasovPizzaViewModel.csproj.CoreCompileInputs.cache
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\obj\Debug\net6.0\KrasovPizzaViewModel.dll
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\obj\Debug\net6.0\refint\KrasovPizzaViewModel.dll
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\obj\Debug\net6.0\KrasovPizzaViewModel.pdb
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\obj\Debug\net6.0\ref\KrasovPizzaViewModel.dll
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\bin\Debug\net6.0\KrasovPizzaModel.dll
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\bin\Debug\net6.0\KrasovPizzaModel.pdb
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\obj\Debug\net6.0\KrasovPizzaViewModel.csproj.CopyComplete
