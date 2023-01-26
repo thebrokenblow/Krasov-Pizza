@@ -3,25 +3,120 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:KrasovPizzaView"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <ListView Margin="10" ItemsSource="{Binding Products}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <WrapPanel>
-                        <TextBlock Text="Name: " />
-                        <TextBlock Text="{Binding Name}" FontWeight="Bold" />
-                        <TextBlock Text=", " />
-                        <TextBlock Text="Age: " />
-                        <TextBlock Text="{Binding Description}" FontWeight="Bold" />
-                        <TextBlock Text=" (" />
-                        <TextBlock Text="{Binding Price}" TextDecorations="Underline" Foreground="Blue" Cursor="Hand" />
-                        <TextBlock Text=")" />
-                    </WrapPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </Grid>
+    <StackPanel>
+
+        <materialDesign:ColorZone
+            Padding="13"
+            Mode="PrimaryMid">
+            <DockPanel>
+                <StackPanel
+                    materialDesign:RippleAssist.IsCentered="True"
+                    Orientation="Horizontal">
+                    <materialDesign:ColorZone
+                        
+                        Margin="16,0,0,0"
+                        Padding="8,4,8,4"
+                        Panel.ZIndex="1"
+                        materialDesign:ElevationAssist.Elevation="Dp2"
+                        CornerRadius="2"
+                        Mode="Standard">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                    Width="Auto" />
+                                <ColumnDefinition
+                                    Width="*" />
+                                <ColumnDefinition
+                                    Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Button
+                                Style="{StaticResource MaterialDesignToolButton}">
+                                <materialDesign:PackIcon
+                                    Kind="Search"
+                                    Opacity=".56" />
+                            </Button>
+                            <TextBox
+                                Text="{Binding NameProduct}"
+                                Grid.Column="1"
+                                MinWidth="200"
+                                Margin="8,0,0,0"
+                                VerticalAlignment="Center"
+                                materialDesign:HintAssist.Hint="Выбрать пиццу"
+                                materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                                BorderThickness="0" 
+                                />
+                            <Button
+                                Grid.Column="2"
+                                Style="{StaticResource MaterialDesignToolButton}"/>
+                        </Grid>
+                    </materialDesign:ColorZone>
+                </StackPanel>
+            </DockPanel>
+        </materialDesign:ColorZone>
+
+        <ScrollViewer>
+            <StackPanel Margin="20 0">
+                <ItemsControl ItemsSource="{Binding Products}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Margin="10" >
+                                <materialDesign:Card
+                                    Width="300"
+                                    Height="350">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition
+                        Height="210" />
+                                            <RowDefinition
+                        Height="*" />
+                                            <RowDefinition
+                        Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Image
+                    Width="220"
+                    Height="210"
+                    Source="{Binding Photo}"
+                    Stretch="UniformToFill" />
+                                        <StackPanel
+                    Grid.Row="1"
+                    Margin="8,24,8,0">
+                                            <TextBlock
+                        FontWeight="Bold"
+                         Text="{Binding Name}"/>
+
+                                            <TextBlock
+                        VerticalAlignment="Center"
+                        Text="{Binding Description}"
+                        TextWrapping="Wrap" />
+                                        </StackPanel>
+                                        <StackPanel
+                    Grid.Row="2"
+                    Margin="8"
+                    HorizontalAlignment="Right"
+                    Orientation="Horizontal">
+                                            <Button
+                        Content="В корзину"
+                        Width="150"
+                        Height="30"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </materialDesign:Card>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </StackPanel>
+        </ScrollViewer>
+
+
+
+    </StackPanel>
 </Window>

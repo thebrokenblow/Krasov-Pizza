@@ -69,3 +69,7 @@ C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\bi
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\bin\Debug\net6.0-windows\KrasovPizzaModel.pdb
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\bin\Debug\net6.0-windows\Npgsql.dll
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\bin\Debug\net6.0-windows\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\bin\Debug\net6.0-windows\MaterialDesignColors.dll
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\bin\Debug\net6.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\bin\Debug\net6.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\obj\Debug\net6.0-windows\App.baml
