@@ -6,7 +6,7 @@ public class ProxyApplicationContext
     {
         List<Product>? listProduct;
 
-        using (ApplicationContext context = new())
+        using (ApplicationContext context = new ApplicationContext())
         {
             listProduct = context.Products.ToList();
         }

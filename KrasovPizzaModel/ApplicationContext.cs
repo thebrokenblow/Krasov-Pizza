@@ -5,8 +5,8 @@ namespace KrasovPizzaModel;
 internal class ApplicationContext : DbContext
 {
 
-    private static ApplicationContext _context;
-    private ApplicationContext()
+    private static ApplicationContext? _context;
+    public ApplicationContext()
     {
         
     }

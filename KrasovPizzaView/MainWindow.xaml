@@ -3,9 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        xmlns:krasovpizzaviewmodel="clr-namespace:KrasovPizzaViewModel;assembly=KrasovPizzaViewModel" 
+        d:DataContext="{d:DesignInstance Type=krasovpizzaviewmodel:ViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="650" Width="1200">
     <StackPanel>
 
         <materialDesign:ColorZone
@@ -39,15 +41,14 @@
                                     Opacity=".56" />
                             </Button>
                             <TextBox
-                                Text="{Binding NameProduct}"
+                                Text="{Binding NameProduct, UpdateSourceTrigger=PropertyChanged}"
                                 Grid.Column="1"
                                 MinWidth="200"
                                 Margin="8,0,0,0"
                                 VerticalAlignment="Center"
                                 materialDesign:HintAssist.Hint="Выбрать пиццу"
                                 materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
-                                BorderThickness="0" 
-                                />
+                                BorderThickness="0" />
                             <Button
                                 Grid.Column="2"
                                 Style="{StaticResource MaterialDesignToolButton}"/>
@@ -69,38 +70,37 @@
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition
-                        Height="210" />
+                                                Height="210" />
                                             <RowDefinition
-                        Height="*" />
+                                                Height="*" />
                                             <RowDefinition
-                        Height="Auto" />
+                                                Height="Auto" />
                                         </Grid.RowDefinitions>
                                         <Image
-                    Width="220"
-                    Height="210"
-                    Source="{Binding Photo}"
-                    Stretch="UniformToFill" />
+                                            Width="220"
+                                            Height="210"
+                                            Source="{Binding Photo}"
+                                            Stretch="UniformToFill" />
                                         <StackPanel
-                    Grid.Row="1"
-                    Margin="8,24,8,0">
+                                            Grid.Row="1"
+                                            Margin="8,24,8,0">
                                             <TextBlock
-                        FontWeight="Bold"
-                         Text="{Binding Name}"/>
-
+                                                FontWeight="Bold"
+                                                Text="{Binding Name}"/>
                                             <TextBlock
-                        VerticalAlignment="Center"
-                        Text="{Binding Description}"
-                        TextWrapping="Wrap" />
+                                                VerticalAlignment="Center"
+                                                Text="{Binding Description}"
+                                                TextWrapping="Wrap" />
                                         </StackPanel>
                                         <StackPanel
-                    Grid.Row="2"
-                    Margin="8"
-                    HorizontalAlignment="Right"
-                    Orientation="Horizontal">
+                                            Grid.Row="2"
+                                            Margin="8"
+                                            HorizontalAlignment="Right"
+                                            Orientation="Horizontal">
                                             <Button
-                        Content="В корзину"
-                        Width="150"
-                        Height="30"/>
+                                                Content="В корзину"
+                                                Width="150"
+                                                Height="30"/>
                                         </StackPanel>
                                     </Grid>
                                 </materialDesign:Card>
