@@ -120,6 +120,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Prism.Core": {
+              "target": "Package",
+              "version": "[8.1.97, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -169,9 +175,6 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\Artem\\Documents\\AProgramming\\C#_Projects\\KrasovPizza\\KrasovPizzaModel\\KrasovPizzaModel.csproj": {
-                "projectPath": "C:\\Users\\Artem\\Documents\\AProgramming\\C#_Projects\\KrasovPizza\\KrasovPizzaModel\\KrasovPizzaModel.csproj"
-              },
               "C:\\Users\\Artem\\Documents\\AProgramming\\C#_Projects\\KrasovPizza\\KrasovPizzaViewModel\\KrasovPizzaViewModel.csproj": {
                 "projectPath": "C:\\Users\\Artem\\Documents\\AProgramming\\C#_Projects\\KrasovPizza\\KrasovPizzaViewModel\\KrasovPizzaViewModel.csproj"
               }

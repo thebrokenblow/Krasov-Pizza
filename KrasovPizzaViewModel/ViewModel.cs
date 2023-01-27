@@ -6,13 +6,17 @@ namespace KrasovPizzaViewModel;
 public class ViewModel : INotifyPropertyChanged
 {
     public List<Product>? Products { get; set; }
+    private List<Product> ProductsInCart { get; set; }
     private List<Product>? copyProduct;
 
     public ViewModel()
     {
         GetProducts();
+        NameProduct = Products?.Select(x => x.Name)?.ToList();
+        ProductsInCart = new();
+        countOfCart = 0;
     }
-
+   
     private void GetProducts()
     {
         List<Product>? listProduct = ProxyApplicationContext.GetProduct();
@@ -24,26 +28,44 @@ public class ViewModel : INotifyPropertyChanged
         }
     }
 
-    private string? nameProduct;
+    //private string? nameProduct;
+
+    //public string? NameProduct
+    //{
+    //    get { return nameProduct; }
+    //    set
+    //    {
+    //        nameProduct = value;
+    //        if (nameProduct?.Trim() == "")
+    //        {
+    //            Products = copyProduct;
+    //            OnPropertyChanged(nameof(Products));
+    //        }
+    //        else
+    //        {
+    //            nameProduct = nameProduct?.ToLower().Trim();
+    //            Products = copyProduct?.Where(x => x.Name?.ToLower().Trim() == nameProduct).ToList();
+    //            OnPropertyChanged(nameof(Products));
+    //        }
+    //    }
+    //}
 
 
-    public string? NameProduct
+
+    public List<string?>? NameProduct { get; set; }
+
+    private int countOfCart;
+
+    public int CountOfCart
     {
-        get { return nameProduct; }
+        get
+        {
+            return countOfCart;
+        }
         set
         {
-            nameProduct = value;
-            if (nameProduct?.Trim() == "")
-            {
-                Products = copyProduct;
-                OnPropertyChanged(nameof(Products));
-            }
-            else
-            {
-                nameProduct = nameProduct?.ToLower().Trim();
-                Products = copyProduct?.Where(x => x.Name?.ToLower().Trim() == nameProduct).ToList();
-                OnPropertyChanged(nameof(Products));
-            }
+            countOfCart = value;
+            OnPropertyChanged(nameof(CountOfCart));
         }
     }
 
@@ -51,5 +73,11 @@ public class ViewModel : INotifyPropertyChanged
     public void OnPropertyChanged([CallerMemberName] string prop = "")
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
+    }
+
+    public void AddProtuctToCart(Product selectedProduct)
+    {
+        ProductsInCart.Add(selectedProduct);
+        CountOfCart++;
     }
 }

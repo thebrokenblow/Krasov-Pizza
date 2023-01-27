@@ -4,25 +4,83 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
-        xmlns:krasovpizzaviewmodel="clr-namespace:KrasovPizzaViewModel;assembly=KrasovPizzaViewModel" 
+        xmlns:krasovpizzaviewmodel="clr-namespace:KrasovPizzaViewModel;assembly=KrasovPizzaViewModel"
         d:DataContext="{d:DesignInstance Type=krasovpizzaviewmodel:ViewModel}"
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="1200">
+    <Window.Resources>
+        <DataTemplate x:Key="listTemplate">
+            <Border Margin="10" >
+                <materialDesign:Card
+                                    Width="300"
+                                    Height="350">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition
+                                                Height="210" />
+                            <RowDefinition
+                                                Height="*" />
+                            <RowDefinition
+                                                Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image
+                                            Width="220"
+                                            Height="210"
+                                            Source="{Binding Photo}"
+                                            Stretch="UniformToFill" />
+                        <StackPanel
+                                            Grid.Row="1"
+                                            Margin="8,24,8,0">
+                            <TextBlock
+                                                FontWeight="Bold"
+                                                Text="{Binding Name}"/>
+                            <TextBlock
+                                                VerticalAlignment="Center"
+                                                Text="{Binding Description}"
+                                                TextWrapping="Wrap" />
+                        </StackPanel>
+                        <StackPanel
+                                            Grid.Row="2"
+                                            Margin="8"
+                                            HorizontalAlignment="Right"
+                                            Orientation="Horizontal">
+                            <Button
+                                                Content="В корзину"
+                                                Width="150"
+                                                Height="35"
+                                Click="AddProtuctToCart"/>
+
+                            
+
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+            </Border>
+        </DataTemplate>
+    </Window.Resources>
     <StackPanel>
 
         <materialDesign:ColorZone
             Padding="13"
             Mode="PrimaryMid">
             <DockPanel>
+                <TextBlock
+        Margin="16,0,0,0"
+                        HorizontalAlignment="Left"
+        VerticalAlignment="Center"
+        Text="Krasov Pizza" 
+                    FontSize="25"/>
                 <StackPanel
-                    materialDesign:RippleAssist.IsCentered="True"
-                    Orientation="Horizontal">
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center">
                     <materialDesign:ColorZone
-                        
-                        Margin="16,0,0,0"
+                        Height="40"
+                        HorizontalAlignment="Right"
+                        Margin="15,0,0,0"
                         Padding="8,4,8,4"
                         Panel.ZIndex="1"
-                        materialDesign:ElevationAssist.Elevation="Dp2"
+                        materialDesign:ElevationAssist.Elevation="Dp6"
                         CornerRadius="2"
                         Mode="Standard">
                         <Grid>
@@ -34,89 +92,70 @@
                                 <ColumnDefinition
                                     Width="Auto" />
                             </Grid.ColumnDefinitions>
-                            <Button
-                                Style="{StaticResource MaterialDesignToolButton}">
-                                <materialDesign:PackIcon
-                                    Kind="Search"
-                                    Opacity=".56" />
-                            </Button>
-                            <TextBox
-                                Text="{Binding NameProduct, UpdateSourceTrigger=PropertyChanged}"
+
+                            <materialDesign:PackIcon
+                                VerticalAlignment="Center"
+                                Kind="Search"
+                                Opacity=".56" 
+                                Height="20"
+                                Width="20" />
+
+
+                            <ComboBox
+                                ItemsSource="{Binding NameProduct}"
+                                IsEditable="True"
                                 Grid.Column="1"
-                                MinWidth="200"
+                                MinWidth="250"
                                 Margin="8,0,0,0"
                                 VerticalAlignment="Center"
-                                materialDesign:HintAssist.Hint="Выбрать пиццу"
+                                materialDesign:HintAssist.Hint="Поиск"
                                 materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
                                 BorderThickness="0" />
-                            <Button
-                                Grid.Column="2"
-                                Style="{StaticResource MaterialDesignToolButton}"/>
+
+
                         </Grid>
                     </materialDesign:ColorZone>
+
+                    <materialDesign:Badged
+                        Badge="Кабинет"
+                        VerticalAlignment="Center"
+                         Margin="15 0">
+                        <materialDesign:PackIcon 
+                            Kind="Account"
+                            Height="30"
+                            Width="30"
+                            Margin="7 0"
+                            Foreground="Black"/>
+                    </materialDesign:Badged>
+                    <materialDesign:Badged
+                        Margin="15 0"
+                        VerticalAlignment="Center"
+                        Badge="{Binding CountOfCart, UpdateSourceTrigger=PropertyChanged}">
+                        <materialDesign:PackIcon 
+                            Foreground="Black" 
+                            Height="30" 
+                            Width="30" 
+                            Kind="Cart" />
+                    </materialDesign:Badged>
+
+
                 </StackPanel>
+
+
             </DockPanel>
+
         </materialDesign:ColorZone>
 
-        <ScrollViewer>
-            <StackPanel Margin="20 0">
-                <ItemsControl ItemsSource="{Binding Products}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Border Margin="10" >
-                                <materialDesign:Card
-                                    Width="300"
-                                    Height="350">
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition
-                                                Height="210" />
-                                            <RowDefinition
-                                                Height="*" />
-                                            <RowDefinition
-                                                Height="Auto" />
-                                        </Grid.RowDefinitions>
-                                        <Image
-                                            Width="220"
-                                            Height="210"
-                                            Source="{Binding Photo}"
-                                            Stretch="UniformToFill" />
-                                        <StackPanel
-                                            Grid.Row="1"
-                                            Margin="8,24,8,0">
-                                            <TextBlock
-                                                FontWeight="Bold"
-                                                Text="{Binding Name}"/>
-                                            <TextBlock
-                                                VerticalAlignment="Center"
-                                                Text="{Binding Description}"
-                                                TextWrapping="Wrap" />
-                                        </StackPanel>
-                                        <StackPanel
-                                            Grid.Row="2"
-                                            Margin="8"
-                                            HorizontalAlignment="Right"
-                                            Orientation="Horizontal">
-                                            <Button
-                                                Content="В корзину"
-                                                Width="150"
-                                                Height="30"/>
-                                        </StackPanel>
-                                    </Grid>
-                                </materialDesign:Card>
-                            </Border>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <WrapPanel/>
-                        </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
-                </ItemsControl>
-            </StackPanel>
-        </ScrollViewer>
-
-
-
+        <ListBox 
+            Name="ListProduct"
+            ItemsSource="{Binding Products}"
+           
+            ItemTemplate="{StaticResource listTemplate}">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
     </StackPanel>
 </Window>

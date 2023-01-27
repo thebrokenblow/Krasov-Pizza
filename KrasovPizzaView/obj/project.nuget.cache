@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qtGtUcSQR8VbL9Gw8fUi4Hw6dyl5+pg/0wXcns58KwKTeiTAitbX8pK+5OO4ffyRv/TXjAoNITtUBqyTCgdRIg==",
+  "dgSpecHash": "6UsS0Rbpo2Twh3VN31OAYK0l95gRbVz0BRk1E8Jhh05NezSzY6+DNyso+s9vedY7UcMc2ljhDJ03j/W8xHOKtA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Artem\\Documents\\AProgramming\\C#_Projects\\KrasovPizza\\KrasovPizzaView\\KrasovPizzaView.csproj",
   "expectedPackageFiles": [
@@ -47,6 +47,7 @@
     "C:\\Users\\Artem\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\Artem\\.nuget\\packages\\npgsql\\7.0.1\\npgsql.7.0.1.nupkg.sha512",
     "C:\\Users\\Artem\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.1\\npgsql.entityframeworkcore.postgresql.7.0.1.nupkg.sha512",
+    "C:\\Users\\Artem\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
     "C:\\Users\\Artem\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Artem\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Artem\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\system.configuration.configurationmanager.5.0.0.nupkg.sha512",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JF85OPMYzB7ZbRt+nunFcjB34pBZt14PZ0nKWUU2arSLMu3X9IQQ4PnHflWH6ovuzDb4ue1foF9IGSgKM8zoPw==",
+  "dgSpecHash": "pEcB29pPNal4AdyXcRlfp+Z3/OmsfoL4Iv+XMWlli4RTlg4izxPAgkg54NrWem725E7Tmm4dCpzYFAbDUgWAkQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Artem\\Documents\\AProgramming\\C#_Projects\\KrasovPizza\\KrasovPizzaViewModel\\KrasovPizzaViewModel.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "C:\\Users\\Artem\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\Artem\\.nuget\\packages\\npgsql\\7.0.1\\npgsql.7.0.1.nupkg.sha512",
     "C:\\Users\\Artem\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.1\\npgsql.entityframeworkcore.postgresql.7.0.1.nupkg.sha512",
+    "C:\\Users\\Artem\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
     "C:\\Users\\Artem\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []

@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\KrasovPizzaModel\KrasovPizzaModel.csproj" />
     <ProjectReference Include="..\KrasovPizzaViewModel\KrasovPizzaViewModel.csproj" />
   </ItemGroup>
 
