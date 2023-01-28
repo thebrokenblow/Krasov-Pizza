@@ -4,54 +4,51 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
-        xmlns:krasovpizzaviewmodel="clr-namespace:KrasovPizzaViewModel;assembly=KrasovPizzaViewModel"
-        d:DataContext="{d:DesignInstance Type=krasovpizzaviewmodel:ViewModel}"
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="1200">
     <Window.Resources>
-        <DataTemplate x:Key="listTemplate">
+        <DataTemplate x:Key="listProductTemplate">
             <Border Margin="10" >
                 <materialDesign:Card
-                                    Width="300"
-                                    Height="350">
+                    Width="300"
+                    Height="350">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition
-                                                Height="210" />
+                                Height="210" />
                             <RowDefinition
-                                                Height="*" />
+                                Height="*" />
                             <RowDefinition
-                                                Height="Auto" />
+                                Height="Auto" />
                         </Grid.RowDefinitions>
                         <Image
-                                            Width="220"
-                                            Height="210"
-                                            Source="{Binding Photo}"
-                                            Stretch="UniformToFill" />
+                            Width="220"
+                            Height="210"
+                            Source="{Binding Photo}"
+                            Stretch="UniformToFill" />
                         <StackPanel
-                                            Grid.Row="1"
-                                            Margin="8,24,8,0">
+                            Grid.Row="1"
+                            Margin="8,24,8,0">
                             <TextBlock
-                                                FontWeight="Bold"
-                                                Text="{Binding Name}"/>
+                                FontWeight="Bold"
+                                Text="{Binding Name}"/>
                             <TextBlock
-                                                VerticalAlignment="Center"
-                                                Text="{Binding Description}"
-                                                TextWrapping="Wrap" />
+                                VerticalAlignment="Center"
+                                Text="{Binding Description}"
+                                TextWrapping="Wrap" />
                         </StackPanel>
                         <StackPanel
-                                            Grid.Row="2"
-                                            Margin="8"
-                                            HorizontalAlignment="Right"
-                                            Orientation="Horizontal">
+                            Grid.Row="2"
+                            Margin="8"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal">
                             <Button
-                                                Content="В корзину"
-                                                Width="150"
-                                                Height="35"
-                                Click="AddProtuctToCart"/>
-
-                            
-
+                                Content="В корзину"
+                                Width="150"
+                                Height="35"
+                                Command="{Binding DataContext.AddProductInCarCommand, 
+                                                  RelativeSource={RelativeSource FindAncestor, AncestorType=ListBox}}" 
+                                CommandParameter="{Binding}"/>
                         </StackPanel>
                     </Grid>
                 </materialDesign:Card>
@@ -65,10 +62,10 @@
             Mode="PrimaryMid">
             <DockPanel>
                 <TextBlock
-        Margin="16,0,0,0"
-                        HorizontalAlignment="Left"
-        VerticalAlignment="Center"
-        Text="Krasov Pizza" 
+                    Margin="16,0,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Text="Krasov Pizza" 
                     FontSize="25"/>
                 <StackPanel
                     Orientation="Horizontal"
@@ -100,7 +97,6 @@
                                 Height="20"
                                 Width="20" />
 
-
                             <ComboBox
                                 ItemsSource="{Binding NameProduct}"
                                 IsEditable="True"
@@ -111,8 +107,6 @@
                                 materialDesign:HintAssist.Hint="Поиск"
                                 materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
                                 BorderThickness="0" />
-
-
                         </Grid>
                     </materialDesign:ColorZone>
 
@@ -137,20 +131,14 @@
                             Width="30" 
                             Kind="Cart" />
                     </materialDesign:Badged>
-
-
                 </StackPanel>
-
-
             </DockPanel>
-
         </materialDesign:ColorZone>
 
         <ListBox 
             Name="ListProduct"
             ItemsSource="{Binding Products}"
-           
-            ItemTemplate="{StaticResource listTemplate}">
+            ItemTemplate="{StaticResource listProductTemplate}">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel />

@@ -1,4 +1,5 @@
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\bin\Debug\net6.0\KrasovPizzaModel.deps.json
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\bin\Debug\net6.0\KrasovPizzaModel.runtimeconfig.json
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\bin\Debug\net6.0\KrasovPizzaModel.dll
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\bin\Debug\net6.0\KrasovPizzaModel.pdb
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\obj\Debug\net6.0\KrasovPizzaModel.csproj.AssemblyReference.cache
@@ -9,6 +10,5 @@ C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\o
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\obj\Debug\net6.0\KrasovPizzaModel.dll
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\obj\Debug\net6.0\refint\KrasovPizzaModel.dll
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\obj\Debug\net6.0\KrasovPizzaModel.pdb
-C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\obj\Debug\net6.0\ref\KrasovPizzaModel.dll
-C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\bin\Debug\net6.0\KrasovPizzaModel.runtimeconfig.json
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\obj\Debug\net6.0\KrasovPizzaModel.genruntimeconfig.cache
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaModel\obj\Debug\net6.0\ref\KrasovPizzaModel.dll

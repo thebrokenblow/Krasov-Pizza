@@ -1,12 +1,16 @@
 ﻿using KrasovPizzaModel;
+using Prism.Commands;
+using Prism.Mvvm;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
 
 namespace KrasovPizzaViewModel;
-public class ViewModel : INotifyPropertyChanged
+public class ViewModel : BindableBase
 {
     public List<Product>? Products { get; set; }
-    private List<Product> ProductsInCart { get; set; }
+    public List<string?>? NameProduct { get; set; }
+    public List<Product> ProductsInCart { get; set; }
     private List<Product>? copyProduct;
 
     public ViewModel()
@@ -15,8 +19,9 @@ public class ViewModel : INotifyPropertyChanged
         NameProduct = Products?.Select(x => x.Name)?.ToList();
         ProductsInCart = new();
         countOfCart = 0;
+        AddProductInCarCommand = new DelegateCommand<Product>(AddProductInCar);
     }
-   
+
     private void GetProducts()
     {
         List<Product>? listProduct = ProxyApplicationContext.GetProduct();
@@ -24,7 +29,7 @@ public class ViewModel : INotifyPropertyChanged
         {
             Products = listProduct;
             copyProduct = listProduct;
-            OnPropertyChanged(nameof(Products));
+            RaisePropertyChanged(nameof(Products));
         }
     }
 
@@ -50,10 +55,6 @@ public class ViewModel : INotifyPropertyChanged
     //    }
     //}
 
-
-
-    public List<string?>? NameProduct { get; set; }
-
     private int countOfCart;
 
     public int CountOfCart
@@ -65,19 +66,15 @@ public class ViewModel : INotifyPropertyChanged
         set
         {
             countOfCart = value;
-            OnPropertyChanged(nameof(CountOfCart));
+            RaisePropertyChanged(nameof(CountOfCart));
         }
     }
 
-    public event PropertyChangedEventHandler? PropertyChanged;
-    public void OnPropertyChanged([CallerMemberName] string prop = "")
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
-    }
+    public DelegateCommand<Product> AddProductInCarCommand { get; }
 
-    public void AddProtuctToCart(Product selectedProduct)
+    public void AddProductInCar(Product productItem)
     {
-        ProductsInCart.Add(selectedProduct);
+        ProductsInCart.Add(productItem);
         CountOfCart++;
     }
 }
