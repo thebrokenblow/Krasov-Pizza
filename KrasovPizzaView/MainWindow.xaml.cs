@@ -8,7 +8,7 @@ namespace KrasovPizzaView;
 /// </summary>
 public partial class MainWindow : Window
 {
-    private ViewModel viewModel = new();
+    private static readonly ViewModel viewModel = new();
     public MainWindow()
     {
         InitializeComponent();
@@ -18,13 +18,13 @@ public partial class MainWindow : Window
     public MainWindow(CartViewModel cartViewModel)
     {
         InitializeComponent();
-        viewModel = new ViewModel(cartViewModel.ListProductsInCart);
+        viewModel.ProductsInCart = cartViewModel.ListProductsInCart;
         DataContext = viewModel;
     }
 
     private void Button_Click(object sender, RoutedEventArgs e)
     {
-        Cart cart = new Cart(viewModel);
+        Cart cart = new(viewModel);
         cart.Show();
         Close();
     }

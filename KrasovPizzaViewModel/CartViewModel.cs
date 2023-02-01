@@ -2,8 +2,6 @@
 using Prism.Commands;
 using Prism.Mvvm;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 
 namespace KrasovPizzaViewModel
 {
@@ -13,18 +11,13 @@ namespace KrasovPizzaViewModel
         {
             public Product Key { get; set; }
             public int Value { get; set; }
-            public decimal Price { get; set; }
+            public decimal? Price { get; set; }
 
             public ProductItemInCart(Product product, int count)
             {
                 Key = product;
                 Value = count;
-                GetSumProduct();
-            }
-
-            private void GetSumProduct()
-            {
-                Price = (decimal)(Key.Price * Value);
+                Price = Key.Price * Value;
             }
         }
 
@@ -43,7 +36,7 @@ namespace KrasovPizzaViewModel
             AddProductCommand = new DelegateCommand<Product>(AddProduct);
         }
 
-        private List<ProductItemInCart> GroupByProductInCar(List<Product> ListProductsInCart)
+        private static List<ProductItemInCart> GroupByProductInCar(List<Product> ListProductsInCart)
         {
             List<ProductItemInCart> productsInCar = 
                 (from x in ListProductsInCart

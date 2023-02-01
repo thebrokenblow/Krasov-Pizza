@@ -8,10 +8,15 @@
         d:DataContext="{d:DesignInstance Type=krasovpizzaviewmodel:CartViewModel}"
         mc:Ignorable="d"
         Title="Cart" Height="650" Width="1200">
-    <StackPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <materialDesign:ColorZone
             Padding="13"
-            Mode="PrimaryMid">
+            Mode="PrimaryMid"
+            Grid.Row="0">
             <DockPanel>
                 <TextBlock
                     Margin="16,0,0,0"
@@ -33,7 +38,7 @@
             </DockPanel>
         </materialDesign:ColorZone>
 
-        <ListView ItemsSource="{Binding ObservableProductsInCart}" >
+        <ListView Grid.Row="1" ScrollViewer.CanContentScroll="False" ItemsSource="{Binding ObservableProductsInCart}" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -65,5 +70,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </StackPanel>
+    </Grid>
 </Window>

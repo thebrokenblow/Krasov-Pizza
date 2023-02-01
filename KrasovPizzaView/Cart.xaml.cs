@@ -18,7 +18,7 @@ namespace KrasovPizzaView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow(cartViewModel);
+            MainWindow mainWindow = new(cartViewModel);
             mainWindow.Show();
             Close();
         }

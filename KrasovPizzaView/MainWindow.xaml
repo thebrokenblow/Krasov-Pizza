@@ -9,10 +9,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="1200">
 
-    <StackPanel>
-
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <materialDesign:ColorZone
             Padding="13"
+            Grid.Row="0"
             Mode="PrimaryMid">
             <DockPanel>
                 <TextBlock
@@ -28,8 +32,8 @@
                     <materialDesign:ColorZone
                         Height="40"
                         HorizontalAlignment="Right"
-                        Margin="15,0,0,0"
-                        Padding="8,4,8,4"
+                        Margin="15 10"
+                        Padding="8 4 8 4"
                         Panel.ZIndex="1"
                         materialDesign:ElevationAssist.Elevation="Dp6"
                         CornerRadius="2"
@@ -64,25 +68,27 @@
                         </Grid>
                     </materialDesign:ColorZone>
 
-                    <materialDesign:Badged
-                        Badge="Кабинет"
-                        VerticalAlignment="Center"
-                         Margin="15 0">
-                        <materialDesign:PackIcon 
-                            Kind="Account"
-                            Height="30"
-                            Width="30"
-                            Margin="7 0"
-                            Foreground="Black"/>
+                    <materialDesign:Badged   
+                        Margin="12 10"
+                        Badge="Кабинет">
+                        <Button
+                            materialDesign:ElevationAssist.Elevation="Dp4"
+                            Style="{StaticResource MaterialDesignFloatingActionMiniButton}">
+                            <materialDesign:PackIcon
+                                Foreground="Black"
+                                Width="30"
+                                Height="30"
+                                Kind="Account" />
+                        </Button>
                     </materialDesign:Badged>
 
-
-                    <materialDesign:Badged   
-                        Margin="15 10"
+                    <materialDesign:Badged  
+                        Margin="12 10"
                         Badge="{Binding CountOfCart, UpdateSourceTrigger=PropertyChanged}">
                         <Button
                             Click="Button_Click"
-                            Style="{StaticResource MaterialDesignFloatingActionMiniButton}">
+                            Style="{StaticResource MaterialDesignFloatingActionMiniButton}"
+                            materialDesign:ElevationAssist.Elevation="Dp4">
                             <materialDesign:PackIcon
                                 Foreground="Black"
                                 Width="30"
@@ -97,6 +103,8 @@
 
         <ListBox 
             Name="ListProduct"
+            Grid.Row="1"
+            ScrollViewer.CanContentScroll="False"
             ItemsSource="{Binding Products}"
             ItemTemplate="{StaticResource listProductTemplate}">
             <ListBox.ItemsPanel>
@@ -105,5 +113,6 @@
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
         </ListBox>
-    </StackPanel>
+        
+    </Grid>
 </Window>

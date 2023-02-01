@@ -4,14 +4,14 @@
     <DataTemplate x:Key="listProductTemplate">
         <Border Margin="10" >
             <materialDesign:Card
-                    Width="300"
-                    Height="350">
+                    Width="330"
+                    Height="Auto">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition
                                 Height="210" />
                         <RowDefinition
-                                Height="*" />
+                                Height="95"/>
                         <RowDefinition
                                 Height="Auto" />
                     </Grid.RowDefinitions>
@@ -20,22 +20,30 @@
                             Height="210"
                             Source="{Binding Photo}"
                             Stretch="UniformToFill" />
-                    <StackPanel
-                            Grid.Row="1"
-                            Margin="8,24,8,0">
+                    <StackPanel 
+                        Grid.Row="1"
+                        Margin="8,24,8,0">
                         <TextBlock
+                           
                                 FontWeight="Bold"
+                            FontSize="15"
                                 Text="{Binding Name}"/>
                         <TextBlock
+                            Margin="0 5"
                                 VerticalAlignment="Center"
                                 Text="{Binding Description}"
+                                FontSize="13"
+                                Height="Auto"
                                 TextWrapping="Wrap" />
                     </StackPanel>
+                    
                     <StackPanel
                             Grid.Row="2"
                             Margin="8"
                             HorizontalAlignment="Right"
                             Orientation="Horizontal">
+                        
+                      
                         <Button
                                 Content="В корзину"
                                 Width="150"
@@ -43,6 +51,14 @@
                                 Command="{Binding DataContext.AddProductInCarCommand, 
                                                   RelativeSource={RelativeSource FindAncestor, AncestorType=ListBox}}" 
                                 CommandParameter="{Binding}"/>
+                    </StackPanel>
+                    <StackPanel 
+                          Grid.Row="2"
+                        Margin="8"
+                        Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                                HorizontalAlignment="Left">
+                        <TextBlock Text="{Binding Price, StringFormat=C, ConverterCulture=ru-Ru}" FontSize="17"/>
                     </StackPanel>
                 </Grid>
             </materialDesign:Card>
