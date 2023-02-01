@@ -44,3 +44,6 @@ C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\bi
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\bin\Debug\net6.0-windows\KrasovPizzaModel.pdb
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\bin\Debug\net6.0-windows\Prism.dll
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\bin\Debug\net6.0-windows\Prism.Wpf.dll
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\obj\Debug\net6.0-windows\Resources\ProductItem.baml
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\obj\Debug\net6.0-windows\Cart.g.cs
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\obj\Debug\net6.0-windows\Cart.baml

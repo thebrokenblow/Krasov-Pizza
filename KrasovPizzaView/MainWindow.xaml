@@ -4,57 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        xmlns:krasovpizzaviewmodel="clr-namespace:KrasovPizzaViewModel;assembly=KrasovPizzaViewModel" 
+        d:DataContext="{d:DesignInstance Type=krasovpizzaviewmodel:ViewModel}"
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="1200">
-    <Window.Resources>
-        <DataTemplate x:Key="listProductTemplate">
-            <Border Margin="10" >
-                <materialDesign:Card
-                    Width="300"
-                    Height="350">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition
-                                Height="210" />
-                            <RowDefinition
-                                Height="*" />
-                            <RowDefinition
-                                Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <Image
-                            Width="220"
-                            Height="210"
-                            Source="{Binding Photo}"
-                            Stretch="UniformToFill" />
-                        <StackPanel
-                            Grid.Row="1"
-                            Margin="8,24,8,0">
-                            <TextBlock
-                                FontWeight="Bold"
-                                Text="{Binding Name}"/>
-                            <TextBlock
-                                VerticalAlignment="Center"
-                                Text="{Binding Description}"
-                                TextWrapping="Wrap" />
-                        </StackPanel>
-                        <StackPanel
-                            Grid.Row="2"
-                            Margin="8"
-                            HorizontalAlignment="Right"
-                            Orientation="Horizontal">
-                            <Button
-                                Content="В корзину"
-                                Width="150"
-                                Height="35"
-                                Command="{Binding DataContext.AddProductInCarCommand, 
-                                                  RelativeSource={RelativeSource FindAncestor, AncestorType=ListBox}}" 
-                                CommandParameter="{Binding}"/>
-                        </StackPanel>
-                    </Grid>
-                </materialDesign:Card>
-            </Border>
-        </DataTemplate>
-    </Window.Resources>
+
     <StackPanel>
 
         <materialDesign:ColorZone
@@ -121,19 +75,25 @@
                             Margin="7 0"
                             Foreground="Black"/>
                     </materialDesign:Badged>
-                    <materialDesign:Badged
-                        Margin="15 0"
-                        VerticalAlignment="Center"
+
+
+                    <materialDesign:Badged   
+                        Margin="15 10"
                         Badge="{Binding CountOfCart, UpdateSourceTrigger=PropertyChanged}">
-                        <materialDesign:PackIcon 
-                            Foreground="Black" 
-                            Height="30" 
-                            Width="30" 
-                            Kind="Cart" />
+                        <Button
+                            Click="Button_Click"
+                            Style="{StaticResource MaterialDesignFloatingActionMiniButton}">
+                            <materialDesign:PackIcon
+                                Foreground="Black"
+                                Width="30"
+                                Height="30"
+                                Kind="Cart" />
+                        </Button>
                     </materialDesign:Badged>
                 </StackPanel>
             </DockPanel>
         </materialDesign:ColorZone>
+
 
         <ListBox 
             Name="ListProduct"

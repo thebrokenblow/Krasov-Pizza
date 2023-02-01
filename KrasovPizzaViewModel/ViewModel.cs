@@ -1,9 +1,6 @@
-﻿using KrasovPizzaModel;
+﻿using Prism.Mvvm;
 using Prism.Commands;
-using Prism.Mvvm;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Windows.Input;
+using KrasovPizzaModel;
 
 namespace KrasovPizzaViewModel;
 public class ViewModel : BindableBase
@@ -11,7 +8,6 @@ public class ViewModel : BindableBase
     public List<Product>? Products { get; set; }
     public List<string?>? NameProduct { get; set; }
     public List<Product> ProductsInCart { get; set; }
-    private List<Product>? copyProduct;
 
     public ViewModel()
     {
@@ -22,41 +18,26 @@ public class ViewModel : BindableBase
         AddProductInCarCommand = new DelegateCommand<Product>(AddProductInCar);
     }
 
+    public ViewModel(List<Product> productsInCart)
+    {
+        ProductsInCart = productsInCart;
+        GetProducts();
+        NameProduct = Products?.Select(x => x.Name)?.ToList();
+        countOfCart = ProductsInCart.Count;
+        AddProductInCarCommand = new DelegateCommand<Product>(AddProductInCar);
+    }
+
     private void GetProducts()
     {
         List<Product>? listProduct = ProxyApplicationContext.GetProduct();
         if (listProduct != null)
         {
             Products = listProduct;
-            copyProduct = listProduct;
             RaisePropertyChanged(nameof(Products));
         }
     }
 
-    //private string? nameProduct;
-
-    //public string? NameProduct
-    //{
-    //    get { return nameProduct; }
-    //    set
-    //    {
-    //        nameProduct = value;
-    //        if (nameProduct?.Trim() == "")
-    //        {
-    //            Products = copyProduct;
-    //            OnPropertyChanged(nameof(Products));
-    //        }
-    //        else
-    //        {
-    //            nameProduct = nameProduct?.ToLower().Trim();
-    //            Products = copyProduct?.Where(x => x.Name?.ToLower().Trim() == nameProduct).ToList();
-    //            OnPropertyChanged(nameof(Products));
-    //        }
-    //    }
-    //}
-
     private int countOfCart;
-
     public int CountOfCart
     {
         get

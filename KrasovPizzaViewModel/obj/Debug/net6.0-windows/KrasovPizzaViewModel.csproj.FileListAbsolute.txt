@@ -1,0 +1,15 @@
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\obj\Debug\net6.0-windows\KrasovPizzaViewModel.csproj.AssemblyReference.cache
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\obj\Debug\net6.0-windows\KrasovPizzaViewModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\obj\Debug\net6.0-windows\KrasovPizzaViewModel.AssemblyInfoInputs.cache
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\obj\Debug\net6.0-windows\KrasovPizzaViewModel.AssemblyInfo.cs
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\obj\Debug\net6.0-windows\KrasovPizzaViewModel.csproj.CoreCompileInputs.cache
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\bin\Debug\net6.0-windows\KrasovPizzaViewModel.deps.json
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\bin\Debug\net6.0-windows\KrasovPizzaViewModel.dll
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\bin\Debug\net6.0-windows\KrasovPizzaViewModel.pdb
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\bin\Debug\net6.0-windows\KrasovPizzaModel.dll
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\bin\Debug\net6.0-windows\KrasovPizzaModel.pdb
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\obj\Debug\net6.0-windows\KrasovPizzaViewModel.csproj.CopyComplete
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\obj\Debug\net6.0-windows\KrasovPizzaViewModel.dll
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\obj\Debug\net6.0-windows\refint\KrasovPizzaViewModel.dll
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\obj\Debug\net6.0-windows\KrasovPizzaViewModel.pdb
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaViewModel\obj\Debug\net6.0-windows\ref\KrasovPizzaViewModel.dll
