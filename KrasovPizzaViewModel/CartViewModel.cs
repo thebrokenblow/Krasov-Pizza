@@ -7,53 +7,28 @@ namespace KrasovPizzaViewModel
 {
     public class CartViewModel : BindableBase
     {
-        public class ProductItemInCart
-        {
-            public Product Key { get; set; }
-            public int Value { get; set; }
-            public decimal? Price { get; set; }
-
-            public ProductItemInCart(Product product, int count)
-            {
-                Key = product;
-                Value = count;
-                Price = Key.Price * Value;
-            }
-        }
-
+        public Cart Cart{ get; private set; }
         public ObservableCollection<ProductItemInCart> ObservableProductsInCart { get; set; }
-        public List<Product> ListProductsInCart { get; set; }
 
-
-        public CartViewModel(ViewModel viewModel)
+        public CartViewModel(Cart cart)
         {
-            ListProductsInCart = viewModel.ProductsInCart;
+            Cart = cart;
             
-            List<ProductItemInCart> productsInCar = GroupByProductInCar(ListProductsInCart);
+            List<ProductItemInCart> productsInCar = Cart.GroupByProductInCar();
             ObservableProductsInCart = new(productsInCar);
 
             RemoveProductCommand = new DelegateCommand<Product>(RemoveProduct);
             AddProductCommand = new DelegateCommand<Product>(AddProduct);
         }
 
-        private static List<ProductItemInCart> GroupByProductInCar(List<Product> ListProductsInCart)
-        {
-            List<ProductItemInCart> productsInCar = 
-                (from x in ListProductsInCart
-                    group x by x into g
-                    orderby g.Key.Name
-                    let count = g.Count()
-                    select new ProductItemInCart(g.Key, count)).ToList();
-
-            return productsInCar;
-        }
 
         public DelegateCommand<Product> RemoveProductCommand { get; }
 
         public void RemoveProduct(Product productItem)
         {
-            ListProductsInCart.Remove(productItem);
-            List<ProductItemInCart> productsInCar = GroupByProductInCar(ListProductsInCart);
+            Cart.RemoveProduct(productItem);
+            FinalAmount = Cart.GetFinalAmount();
+            List<ProductItemInCart> productsInCar = Cart.GroupByProductInCar();
             ObservableProductsInCart = new(productsInCar);
 
             RaisePropertyChanged(nameof(ObservableProductsInCart));
@@ -63,11 +38,28 @@ namespace KrasovPizzaViewModel
 
         public void AddProduct(Product productItem)
         {
-            ListProductsInCart.Add(productItem);
-            List<ProductItemInCart> productsInCar = GroupByProductInCar(ListProductsInCart);
+            Cart.AddProduct(productItem);
+            FinalAmount = Cart.GetFinalAmount();
+            List<ProductItemInCart> productsInCar = Cart.GroupByProductInCar();
             ObservableProductsInCart = new(productsInCar);
 
             RaisePropertyChanged(nameof(ObservableProductsInCart));
+        }
+
+        private decimal? finalAmount;
+
+        public decimal? FinalAmount
+        {
+            get
+            {
+                finalAmount = Cart.GetFinalAmount();
+                return finalAmount;
+            }
+            set
+            {
+                finalAmount = value;
+                RaisePropertyChanged(nameof(FinalAmount));
+            }
         }
     }
 }

@@ -7,18 +7,21 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Cart.xaml.cs">
+    <Compile Update="CartView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Cart.xaml">
+    <Page Update="CartView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MainWindow.xaml">
+    <Page Update="MenuView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resources\ProductItem.xaml">
+    <Page Update="Resources\CartProductItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\MenuProductItem.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

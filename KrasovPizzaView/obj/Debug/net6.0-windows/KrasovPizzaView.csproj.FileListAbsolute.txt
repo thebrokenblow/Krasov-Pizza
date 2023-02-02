@@ -1,9 +1,6 @@
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\obj\Debug\net6.0-windows\KrasovPizzaView.csproj.AssemblyReference.cache
-C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\obj\Debug\net6.0-windows\MainWindow.baml
-C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\obj\Debug\net6.0-windows\KrasovPizzaView_MarkupCompile.cache
-C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\obj\Debug\net6.0-windows\KrasovPizzaView_MarkupCompile.lref
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\bin\Debug\net6.0-windows\KrasovPizzaView.exe
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\bin\Debug\net6.0-windows\KrasovPizzaView.deps.json
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\bin\Debug\net6.0-windows\KrasovPizzaView.runtimeconfig.json
@@ -44,6 +41,9 @@ C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\bi
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\bin\Debug\net6.0-windows\KrasovPizzaModel.pdb
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\bin\Debug\net6.0-windows\Prism.dll
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\bin\Debug\net6.0-windows\Prism.Wpf.dll
-C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\obj\Debug\net6.0-windows\Resources\ProductItem.baml
-C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\obj\Debug\net6.0-windows\Cart.g.cs
-C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\obj\Debug\net6.0-windows\Cart.baml
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\obj\Debug\net6.0-windows\CartView.baml
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\obj\Debug\net6.0-windows\CartView.g.cs
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\obj\Debug\net6.0-windows\MenuView.baml
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\obj\Debug\net6.0-windows\MenuView.g.cs
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\obj\Debug\net6.0-windows\Resources\MenuProductItem.baml
+C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\obj\Debug\net6.0-windows\Resources\CartProductItem.baml

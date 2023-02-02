@@ -2,7 +2,7 @@
 
 public class ProxyApplicationContext
 {
-    public static List<Product>? GetProduct()
+    public static List<Product>? GetProducts()
     {
         List<Product>? listProduct;
 

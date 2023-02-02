@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Artem\Documents\AProgramming\C#_Projects\KrasovPizza\KrasovPizzaView\App.xaml
-31827446251
+41899249434
 
-6-360924919
+61470642633
 21581233190
-Cart.xaml;MainWindow.xaml;Resources\ProductItem.xaml;
+CartView.xaml;MenuView.xaml;Resources\CartProductItem.xaml;Resources\MenuProductItem.xaml;
 
-True
+False
 
